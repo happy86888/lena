@@ -1,0 +1,39 @@
+name: Update Trends
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-trends:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run fetcher (Pexels + Unsplash 自動偵測)
+        env:
+          PEXELS_KEY:   ${{ secrets.PEXELS_KEY }}
+          UNSPLASH_KEY: ${{ secrets.UNSPLASH_KEY }}
+        run: python scripts/fetch_all.py
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "Miss Lena Bot"
+          git config user.email "bot@miss-lena.com"
+          git add data/trends.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update trends $(date -u +%Y-%m-%d)"
+            git push
+          fi
