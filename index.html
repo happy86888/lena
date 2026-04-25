@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f5f1ea">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>Miss Lena — Bridal & Evening Atelier</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+TC:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: #f5f1ea;
+  --bg-soft: #ebe5db;
+  --ink: #1a1612;
+  --ink-soft: #4a4138;
+  --muted: #8a8076;
+  --line: #d8cfc0;
+  --accent: #8b6f47;
+  --cream: #faf7f1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family: 'Noto Serif TC', 'Cormorant Garamond', serif;
+  background: var(--bg);
+  color: var(--ink);
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.serif-display{font-family:'Cormorant Garamond', 'Noto Serif TC', serif; font-weight:300}
+.sans{font-family:'Inter', sans-serif}
+
+/* ========== NAV ========== */
+nav{
+  position: fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 22px 48px;
+  background: rgba(245,241,234,0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(216,207,192,0.5);
+}
+.logo{
+  font-family:'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 400; letter-spacing: 0.18em;
+  font-style: italic;
+}
+.logo span{font-style:normal; letter-spacing: 0.32em; font-size: 11px; display:block; margin-top:2px; color:var(--muted); font-family:'Inter',sans-serif; font-weight:400}
+.nav-links{display:flex; gap:38px; list-style:none}
+.nav-links a{
+  text-decoration:none; color:var(--ink-soft);
+  font-family:'Inter', sans-serif; font-size:12px;
+  letter-spacing: 0.22em; text-transform: uppercase; font-weight:400;
+  transition: color .3s;
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.22em;
+  text-transform:uppercase; padding: 11px 22px;
+  border:1px solid var(--ink); color:var(--ink); text-decoration:none;
+  transition: all .3s;
+}
+.nav-cta:hover{background:var(--ink); color:var(--cream)}
+
+/* ========== HERO ========== */
+.hero{
+  min-height: 100vh;
+  display:grid; grid-template-columns: 1.1fr 1fr;
+  padding: 120px 48px 60px;
+  gap: 60px; align-items:center;
+  position:relative;
+}
+.hero-text{position:relative; z-index:2}
+.eyebrow{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.32em;
+  text-transform:uppercase; color:var(--muted); margin-bottom: 28px;
+  display:flex; align-items:center; gap:16px;
+}
+.eyebrow::before{content:''; width:36px; height:1px; background:var(--muted); display:inline-block}
+h1.hero-title{
+  font-family:'Cormorant Garamond', 'Noto Serif TC', serif;
+  font-size: clamp(56px, 8vw, 120px);
+  line-height: 0.92;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: 36px;
+}
+h1.hero-title em{
+  font-style:italic; color:var(--accent); font-weight:400;
+}
+.hero-sub{
+  font-size: 17px; line-height: 1.8; color:var(--ink-soft);
+  max-width: 460px; margin-bottom: 44px;
+  font-weight: 300;
+}
+.hero-actions{display:flex; gap:16px; align-items:center}
+.btn-primary{
+  background:var(--ink); color:var(--cream);
+  padding: 16px 32px;
+  font-family:'Inter',sans-serif; font-size:12px; letter-spacing:.22em;
+  text-transform:uppercase; text-decoration:none; border:none; cursor:pointer;
+  transition: all .3s;
+}
+.btn-primary:hover{background:var(--accent)}
+.btn-link{
+  font-family:'Inter',sans-serif; font-size:12px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--ink); text-decoration:none;
+  border-bottom: 1px solid var(--ink); padding-bottom:4px;
+}
+.hero-visual{
+  position:relative; height: 78vh; min-height:540px;
+}
+.hero-img{
+  position:absolute; background:var(--bg-soft);
+  background-size: cover; background-position: center;
+  overflow:hidden;
+}
+.hero-img-1{
+  top:0; right:0; width:78%; height:88%;
+  background-image: linear-gradient(135deg, #d4c5b0 0%, #b8a48a 100%);
+}
+.hero-img-2{
+  bottom:0; left:0; width:42%; height:48%;
+  background-image: linear-gradient(160deg, #e8dcc8 0%, #c4b094 100%);
+  border: 8px solid var(--bg);
+}
+.hero-img::after{
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 60%, rgba(26,22,18,0.15));
+}
+.hero-img-label{
+  position:absolute; bottom:18px; left:18px;
+  font-family:'Inter',sans-serif; font-size:10px;
+  letter-spacing:.3em; text-transform:uppercase; color:var(--cream);
+  z-index:2;
+}
+.hero-meta{
+  position:absolute; bottom: 30px; left: 48px;
+  display:flex; gap:60px;
+  font-family:'Inter',sans-serif; font-size:11px;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--muted);
+}
+.hero-meta div strong{display:block; color:var(--ink); font-size:24px;
+  font-family:'Cormorant Garamond',serif; letter-spacing:0; text-transform:none; margin-bottom:4px; font-weight:400}
+
+/* ========== MARQUEE ========== */
+.marquee{
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  overflow:hidden; padding: 24px 0;
+  background: var(--cream);
+}
+.marquee-track{
+  display:flex; gap:80px; white-space:nowrap;
+  animation: scroll 38s linear infinite;
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size: 28px; color:var(--ink-soft);
+}
+.marquee-track span{display:inline-flex; align-items:center; gap:80px}
+.marquee-track span::after{content:'✦'; color:var(--accent); font-size:14px}
+@keyframes scroll{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+/* ========== SECTION HEADER ========== */
+.section{padding: 120px 48px; position:relative}
+.section-header{
+  display:flex; justify-content:space-between; align-items:flex-end;
+  margin-bottom: 64px; gap:40px; flex-wrap:wrap;
+}
+.section-num{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.32em;
+  color:var(--muted); margin-bottom: 14px;
+}
+.section-title{
+  font-family:'Cormorant Garamond','Noto Serif TC',serif;
+  font-size: clamp(40px, 5vw, 68px); font-weight:300;
+  line-height: 1; letter-spacing:-.01em;
+}
+.section-title em{font-style:italic; color:var(--accent)}
+.section-desc{
+  max-width: 360px; color:var(--ink-soft); line-height:1.7;
+  font-size:15px;
+}
+
+/* ========== STYLE FILTERS ========== */
+.filters{
+  display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 48px;
+  align-items:center;
+}
+.filter-label{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--muted); margin-right:10px;
+}
+.chip{
+  padding: 9px 18px; border:1px solid var(--line);
+  background:transparent; cursor:pointer;
+  font-family:'Inter',sans-serif; font-size:12px; letter-spacing:.08em;
+  color:var(--ink-soft); transition:all .25s; border-radius:999px;
+}
+.chip:hover{border-color:var(--ink); color:var(--ink)}
+.chip.active{background:var(--ink); color:var(--cream); border-color:var(--ink)}
+
+.color-row{display:flex; gap:14px; flex-wrap:wrap; align-items:center; margin-bottom:48px}
+.color-swatch{
+  width:38px; height:38px; border-radius:50%; cursor:pointer;
+  border:1px solid var(--line); position:relative;
+  transition: transform .2s;
+}
+.color-swatch:hover{transform:scale(1.12)}
+.color-swatch.active{box-shadow: 0 0 0 2px var(--bg), 0 0 0 3px var(--ink)}
+.color-swatch::after{
+  content: attr(data-name);
+  position:absolute; top: calc(100% + 8px); left:50%; transform:translateX(-50%);
+  font-family:'Inter',sans-serif; font-size:10px; letter-spacing:.16em;
+  color:var(--muted); white-space:nowrap; opacity:0; transition:opacity .2s;
+  text-transform:uppercase;
+}
+.color-swatch:hover::after{opacity:1}
+
+/* ========== DRESS GRID ========== */
+.dress-grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+.dress-card{
+  position:relative; cursor:pointer;
+  text-decoration:none; color:inherit;
+  display:flex; flex-direction:column;
+  transition: transform .5s cubic-bezier(.2,.8,.2,1);
+}
+.dress-card:hover{transform: translateY(-6px)}
+.dress-card .img{
+  width:100%; aspect-ratio: 3/4; background:var(--bg-soft);
+  margin-bottom: 16px; overflow:hidden; position:relative;
+  background-size:cover; background-position:center;
+}
+.dress-card.tall .img{aspect-ratio: 3/4.6}
+.dress-card .img::after{
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 70%, rgba(26,22,18,0.25));
+  opacity:0; transition: opacity .4s;
+}
+.dress-card:hover .img::after{opacity:1}
+.dress-info{display:flex; justify-content:space-between; align-items:flex-start; gap:12px}
+.dress-name{
+  font-family:'Cormorant Garamond',serif; font-size: 22px; font-weight:400;
+  letter-spacing:.01em; line-height:1.2;
+}
+.dress-meta{
+  font-family:'Inter',sans-serif; font-size:10px; letter-spacing:.2em;
+  text-transform:uppercase; color:var(--muted); margin-top:4px;
+}
+.dress-price{
+  font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic;
+  color: var(--accent); white-space:nowrap;
+}
+.dress-tag{
+  position:absolute; top:14px; left:14px; z-index:2;
+  background: rgba(250,247,241,0.92); backdrop-filter: blur(8px);
+  padding: 6px 12px;
+  font-family:'Inter',sans-serif; font-size:9px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--ink);
+}
+.dress-color-dots{
+  position:absolute; bottom:14px; right:14px; display:flex; gap:5px; z-index:2;
+}
+.dress-color-dots span{
+  width:14px; height:14px; border-radius:50%;
+  border: 1.5px solid rgba(250,247,241,0.9);
+}
+.dress-card:nth-child(1){grid-column: span 5}
+.dress-card:nth-child(2){grid-column: span 4}
+.dress-card:nth-child(3){grid-column: span 3}
+.dress-card:nth-child(4){grid-column: span 3}
+.dress-card:nth-child(5){grid-column: span 4}
+.dress-card:nth-child(6){grid-column: span 5}
+.dress-card:nth-child(7){grid-column: span 4}
+.dress-card:nth-child(8){grid-column: span 4}
+.dress-card:nth-child(9){grid-column: span 4}
+
+/* ========== TREND WALL ========== */
+.trend-section{
+  background: var(--cream);
+  margin: 0 -48px;
+  padding: 120px 48px;
+}
+.trend-tabs{
+  display:flex; gap:8px; margin-bottom:40px;
+  border-bottom: 1px solid var(--line);
+  flex-wrap:wrap;
+}
+.trend-tab{
+  padding: 14px 22px; border:none; background:transparent; cursor:pointer;
+  font-family:'Inter',sans-serif; font-size:12px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--muted);
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: all .3s;
+}
+.trend-tab.active{color:var(--ink); border-bottom-color:var(--ink)}
+.trend-grid{
+  columns: 4 240px; column-gap: 16px;
+}
+.trend-item{
+  break-inside: avoid; margin-bottom: 16px;
+  position:relative; overflow:hidden;
+  background:var(--bg-soft);
+  cursor:pointer;
+  display:block;
+  transition: transform .4s;
+  text-decoration:none;
+}
+.trend-item:hover{transform: scale(1.02)}
+.trend-item img{width:100%; display:block; height:auto}
+.trend-overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, transparent 50%, rgba(26,22,18,0.7));
+  opacity:0; transition: opacity .3s;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding: 20px;
+}
+.trend-item:hover .trend-overlay{opacity:1}
+.trend-source{
+  font-family:'Inter',sans-serif; font-size:10px; letter-spacing:.22em;
+  text-transform:uppercase; color: rgba(250,247,241,0.7);
+  margin-bottom: 4px;
+}
+.trend-caption{
+  font-family:'Cormorant Garamond',serif; font-size:18px; color:var(--cream);
+  font-style:italic;
+}
+.trend-loading{
+  text-align:center; padding: 80px 20px; color: var(--muted);
+  font-family: 'Inter',sans-serif; font-size: 13px; letter-spacing:.2em;
+  text-transform: uppercase;
+}
+.trend-update{
+  margin-top: 32px; text-align: right;
+  font-family:'Inter',sans-serif; font-size: 11px; letter-spacing:.2em;
+  text-transform: uppercase; color: var(--muted);
+}
+
+/* placeholder gradients for fallback */
+.ph1{background-image: linear-gradient(160deg,#e8dcc8,#c4b094); aspect-ratio: 3/4.5}
+.ph2{background-image: linear-gradient(120deg,#dcd0bd,#9c8870); aspect-ratio: 3/3.2}
+.ph3{background-image: linear-gradient(180deg,#f0e6d4,#b8a484); aspect-ratio: 3/4}
+.ph4{background-image: linear-gradient(140deg,#d8c8b0,#a89478); aspect-ratio: 3/3.6}
+.ph5{background-image: linear-gradient(200deg,#ece0c8,#b4a080); aspect-ratio: 3/4.2}
+.ph6{background-image: linear-gradient(160deg,#e0d4bc,#988470); aspect-ratio: 3/3.4}
+.ph7{background-image: linear-gradient(180deg,#d4c4ac,#a89074); aspect-ratio: 3/4.4}
+.ph8{background-image: linear-gradient(120deg,#e4d8c0,#ac9878); aspect-ratio: 3/3.8}
+
+/* ========== PREORDER ========== */
+.preorder-section{
+  display:grid; grid-template-columns: 1fr 1.1fr;
+  gap: 80px; align-items:start;
+}
+.preorder-visual{position:sticky; top:120px}
+.preorder-img{
+  width:100%; aspect-ratio: 3/4; background:var(--bg-soft);
+  background-image: linear-gradient(170deg, #e0d2b8, #8b7458);
+  position:relative; overflow:hidden;
+}
+.preorder-img::before{
+  content:'AA-2024'; position:absolute; bottom:24px; left:24px;
+  font-family:'Inter',sans-serif; font-size:10px; letter-spacing:.3em;
+  color:var(--cream);
+}
+.timeline{
+  position:relative; padding-left: 32px;
+}
+.timeline::before{
+  content:''; position:absolute; left:7px; top:8px; bottom:8px;
+  width:1px; background: var(--line);
+}
+.timeline-step{
+  position:relative; padding-bottom: 36px;
+}
+.timeline-step::before{
+  content:''; position:absolute; left:-32px; top:6px;
+  width:15px; height:15px; border-radius:50%;
+  border:2px solid var(--accent); background: var(--bg);
+}
+.timeline-step.done::before{background:var(--accent)}
+.timeline-step h4{
+  font-family:'Cormorant Garamond','Noto Serif TC',serif;
+  font-size: 24px; font-weight: 400; margin-bottom: 6px;
+}
+.timeline-step .days{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--accent); margin-bottom: 8px;
+}
+.timeline-step p{color:var(--ink-soft); line-height:1.7; font-size:14px}
+
+.preorder-form{
+  margin-top: 48px; padding: 32px;
+  border: 1px solid var(--line); background: var(--cream);
+}
+.preorder-form h3{
+  font-family:'Cormorant Garamond',serif; font-size:28px; font-weight:400;
+  margin-bottom: 8px;
+}
+.preorder-form .sub{
+  color:var(--muted); font-size:13px; margin-bottom:24px;
+  font-family:'Inter',sans-serif;
+}
+.form-row{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px}
+.form-input{
+  width:100%; padding: 13px 14px; border:1px solid var(--line);
+  background: var(--bg); font-family:'Inter',sans-serif; font-size:13px;
+  color: var(--ink); transition: border-color .2s;
+}
+.form-input:focus{outline:none; border-color:var(--ink)}
+.form-input::placeholder{color:var(--muted)}
+textarea.form-input{resize:vertical; min-height:80px; font-family:'Inter',sans-serif}
+.deposit-box{
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 16px 0; margin: 18px 0;
+  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
+.deposit-box span:first-child{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--muted);
+}
+.deposit-box span:last-child{
+  font-family:'Cormorant Garamond',serif; font-size:24px; color:var(--accent); font-style:italic;
+}
+
+/* ========== STORY ========== */
+.story-section{
+  display:grid; grid-template-columns: 1fr 1fr; gap:80px; align-items:center;
+}
+.story-text h2{
+  font-family:'Cormorant Garamond','Noto Serif TC',serif;
+  font-size: clamp(40px, 5vw, 64px); font-weight:300; line-height:1.05;
+  margin-bottom: 32px;
+}
+.story-text h2 em{font-style:italic; color:var(--accent)}
+.story-text p{color:var(--ink-soft); line-height:1.9; font-size:16px; margin-bottom:18px}
+.story-stats{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
+  margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--line);
+}
+.story-stat strong{
+  font-family:'Cormorant Garamond',serif; font-size:42px; font-weight:300;
+  color:var(--accent); display:block; line-height:1;
+}
+.story-stat span{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.22em;
+  text-transform:uppercase; color:var(--muted); display:block; margin-top:8px;
+}
+.story-visual{
+  display:grid; grid-template-columns: repeat(2, 1fr); gap:16px;
+}
+.story-img{aspect-ratio: 3/4; background:var(--bg-soft)}
+.story-img:nth-child(1){background-image:linear-gradient(160deg,#e8dcc8,#a89478); margin-top:40px}
+.story-img:nth-child(2){background-image:linear-gradient(200deg,#d4c4ac,#8b7458)}
+.story-img:nth-child(3){background-image:linear-gradient(140deg,#dcd0bd,#988470)}
+.story-img:nth-child(4){background-image:linear-gradient(180deg,#e0d2b8,#a09078); margin-top:-30px}
+
+/* ========== FOOTER ========== */
+footer{
+  background: var(--ink); color: var(--bg-soft);
+  padding: 80px 48px 32px;
+}
+.footer-grid{
+  display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap:60px;
+  margin-bottom: 60px;
+}
+.footer-brand h3{
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size: 42px; font-weight:300; margin-bottom: 16px;
+}
+.footer-brand p{font-size:14px; line-height:1.8; opacity:.7; max-width:340px; font-family:'Inter',sans-serif}
+.footer-col h5{
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.28em;
+  text-transform:uppercase; color: var(--accent); margin-bottom:18px; font-weight:500;
+}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:10px}
+.footer-col a{color:var(--bg-soft); text-decoration:none; font-size:14px; opacity:.75; transition: opacity .2s; font-family:'Inter',sans-serif}
+.footer-col a:hover{opacity:1}
+.footer-bottom{
+  padding-top: 28px; border-top:1px solid rgba(255,255,255,0.1);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  font-family:'Inter',sans-serif; font-size:11px; letter-spacing:.18em;
+  text-transform:uppercase; opacity:.6;
+}
+
+/* ========== RESPONSIVE — Mobile-first refinements ========== */
+
+/* === Tablet 平板 (≤960px) === */
+@media(max-width: 960px){
+  nav{padding: 16px 24px}
+  .nav-links{display:none}
+  .nav-cta{padding: 9px 16px; font-size:10px}
+
+  .hero{
+    grid-template-columns:1fr;
+    padding: 100px 24px 40px;
+    min-height: auto;
+    gap: 40px;
+  }
+  .hero-visual{height: 60vh; min-height:380px}
+  .hero-meta{
+    position:static; margin-top:24px; padding:0;
+    gap: 32px; flex-wrap: wrap;
+  }
+
+  .section{padding: 80px 24px}
+  .trend-section{margin: 0 -24px; padding: 80px 24px}
+  .section-header{margin-bottom: 40px}
+
+  .preorder-section, .story-section{
+    grid-template-columns:1fr; gap:48px;
+  }
+  .preorder-visual{position:static}
+  .preorder-img{aspect-ratio: 4/3; max-height: 50vh}
+
+  .dress-card{grid-column: span 6 !important}
+
+  .footer-grid{grid-template-columns:1fr 1fr; gap:40px}
+  footer{padding: 60px 24px 32px}
+}
+
+/* === Small tablet / large phone 大手機 (≤640px) === */
+@media(max-width: 640px){
+  nav{padding: 14px 18px}
+  .logo{font-size: 22px}
+  .logo span{font-size: 9px; letter-spacing: 0.28em}
+  .nav-cta{padding: 8px 14px; font-size: 9px; letter-spacing: .18em}
+
+  .hero{padding: 90px 18px 32px; gap: 32px}
+  .eyebrow{font-size: 10px; margin-bottom: 20px}
+  .eyebrow::before{width: 24px}
+  h1.hero-title{
+    font-size: clamp(44px, 13vw, 64px);
+    line-height: 0.95;
+    margin-bottom: 24px;
+  }
+  .hero-sub{font-size: 15px; line-height: 1.7; margin-bottom: 32px}
+  .hero-actions{flex-direction:column; align-items:stretch; gap:14px}
+  .btn-primary{padding: 16px 24px; text-align:center; font-size:11px}
+  .btn-link{text-align:center; padding-top:8px}
+
+  .hero-visual{height: 56vh; min-height: 380px}
+  .hero-img-1{
+    top: 0; right: 0;
+    width: 88%; height: 72%;
+  }
+  .hero-img-2{
+    bottom: 0; left: 0;
+    width: 52%; height: 38%;
+    border-width: 5px;
+  }
+  .hero-img-label{font-size: 9px; bottom: 12px; left: 12px; letter-spacing: .24em}
+
+  .hero-meta{
+    gap: 20px; padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+  .hero-meta div{font-size: 9px; letter-spacing: .16em}
+  .hero-meta div strong{font-size: 22px}
+
+  .marquee{padding: 18px 0}
+  .marquee-track{font-size: 22px; gap: 50px}
+  .marquee-track span{gap: 50px}
+
+  .section{padding: 64px 18px}
+  .section-header{margin-bottom: 32px; gap: 20px}
+  .section-num{font-size: 10px; letter-spacing: .26em; margin-bottom: 10px}
+  .section-title{font-size: clamp(32px, 9vw, 44px)}
+  .section-desc{font-size: 14px; max-width: 100%}
+
+  /* filters */
+  .filters{
+    gap: 8px; margin-bottom: 32px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filters::-webkit-scrollbar{display:none}
+  .filter-label{margin-right: 4px; font-size: 10px; flex-shrink:0}
+  .chip{
+    padding: 8px 14px; font-size: 11px; flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .color-row{
+    gap: 12px; margin-bottom: 36px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    scrollbar-width: none;
+  }
+  .color-row::-webkit-scrollbar{display:none}
+  .color-swatch{width: 34px; height: 34px; flex-shrink: 0}
+
+  /* dress grid — single column on phone */
+  .dress-grid{gap: 16px}
+  .dress-card{grid-column: span 12 !important}
+  .dress-card .img{aspect-ratio: 4/5}
+  .dress-name{font-size: 20px}
+  .dress-meta{font-size: 9px}
+  .dress-price{font-size: 17px}
+
+  /* trend wall */
+  .trend-section{margin: 0 -18px; padding: 64px 18px}
+  .trend-tabs{
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-bottom: 28px;
+    padding-bottom: 0;
+    scrollbar-width: none;
+  }
+  .trend-tabs::-webkit-scrollbar{display:none}
+  .trend-tab{
+    padding: 12px 16px; font-size: 11px; letter-spacing: .18em;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .trend-grid{
+    columns: 2 140px; column-gap: 10px;
+  }
+  .trend-item{margin-bottom: 10px}
+  .trend-overlay{
+    padding: 10px 12px;
+    opacity: 1;
+    background: linear-gradient(180deg, transparent 65%, rgba(26,22,18,0.78));
+    justify-content: flex-end;
+  }
+  .trend-source{font-size: 8px; letter-spacing: .16em; margin-bottom: 2px}
+  .trend-caption{font-size: 12px}
+
+  /* preorder */
+  .preorder-section{gap: 36px}
+  .preorder-img{aspect-ratio: 4/5}
+  .timeline{padding-left: 28px}
+  .timeline-step{padding-bottom: 28px}
+  .timeline-step h4{font-size: 20px}
+  .timeline-step p{font-size: 13px}
+  .timeline-step .days{font-size: 10px}
+
+  .preorder-form{padding: 24px 20px; margin-top: 32px}
+  .preorder-form h3{font-size: 24px}
+  .form-row{
+    grid-template-columns: 1fr; gap: 12px;
+  }
+  .form-input{font-size: 16px; padding: 14px 14px} /* font-size 16+ 防 iOS 自動縮放 */
+  .deposit-box span:last-child{font-size: 22px}
+
+  /* story */
+  .story-section{gap: 40px}
+  .story-text h2{font-size: clamp(32px, 8vw, 48px)}
+  .story-text p{font-size: 15px; line-height: 1.85}
+  .story-stats{gap: 16px; margin-top: 36px}
+  .story-stat strong{font-size: 32px}
+  .story-stat span{font-size: 9px; letter-spacing: .18em}
+  .story-visual{gap: 10px}
+  .story-img:nth-child(1){margin-top: 20px}
+  .story-img:nth-child(4){margin-top: -20px}
+
+  /* footer */
+  footer{padding: 56px 18px 28px}
+  .footer-grid{grid-template-columns: 1fr; gap: 36px; margin-bottom: 36px}
+  .footer-brand h3{font-size: 36px}
+  .footer-brand p{font-size: 13px}
+  .footer-bottom{flex-direction:column; align-items:flex-start; gap: 8px}
+
+  /* sticky bottom CTA bar — 手機獨有 */
+  .mobile-cta{
+    display: flex !important;
+  }
+}
+
+/* === iPhone Mini / 小手機 (≤380px) === */
+@media(max-width: 380px){
+  nav{padding: 12px 14px}
+  .logo{font-size: 19px}
+  .logo span{font-size: 8px}
+  .nav-cta{padding: 7px 11px; font-size: 8px}
+
+  .hero{padding: 80px 14px 28px}
+  h1.hero-title{font-size: 38px}
+  .hero-sub{font-size: 14px}
+
+  .section{padding: 56px 14px}
+  .trend-section{margin: 0 -14px; padding: 56px 14px}
+  .section-title{font-size: 30px}
+
+  .trend-grid{columns: 2 120px; column-gap: 8px}
+  .preorder-form{padding: 20px 16px}
+  footer{padding: 48px 14px 24px}
+}
+
+/* === iPhone notch / safe area 處理 === */
+@supports(padding: max(0px)){
+  body{
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .mobile-cta{
+    padding-bottom: max(14px, env(safe-area-inset-bottom));
+  }
+}
+
+/* === 手機底部 sticky CTA bar (預設 hidden) === */
+.mobile-cta{
+  display: none;
+  position: fixed; left:0; right:0; bottom:0;
+  z-index: 99;
+  padding: 12px 16px;
+  background: rgba(245,241,234,0.96);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--line);
+  gap: 10px;
+  align-items: center;
+}
+.mobile-cta a{
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px 16px;
+  font-family: 'Inter',sans-serif;
+  font-size: 11px; letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.mobile-cta .cta-line{
+  background: #06C755; color: white;
+  border: 1px solid #06C755;
+}
+.mobile-cta .cta-book{
+  background: var(--ink); color: var(--cream);
+  border: 1px solid var(--ink);
+}
+
+/* 給 sticky bar 留底部空間（含 safe-area） */
+@media(max-width: 640px){
+  body{padding-bottom: 88px}
+}
+@supports(padding: max(0px)){
+  @media(max-width: 640px){
+    body{padding-bottom: max(88px, calc(76px + env(safe-area-inset-bottom)))}
+  }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Miss Lena<span>BRIDAL ATELIER · EST 2015</span></div>
+  <ul class="nav-links">
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#trends">Trends</a></li>
+    <li><a href="#preorder">Pre-Order</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#preorder" class="nav-cta">Book Fitting</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">Spring / Summer 2026 — New Arrivals</div>
+    <h1 class="hero-title">Quietly,<br>made for <em>you.</em></h1>
+    <p class="hero-sub">十年手作工藝，從台南走向線上。每一件婚紗、晚禮服、小禮服，由我們的版師為你量身打版、製作、寄送到家。無店面，更專注。</p>
+    <div class="hero-actions">
+      <a href="#collection" class="btn-primary">Explore Collection</a>
+      <a href="#preorder" class="btn-link">Pre-Order Process →</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img hero-img-1"><div class="hero-img-label">AA-2026 · IVORY SILK</div></div>
+    <div class="hero-img hero-img-2"><div class="hero-img-label">EVENING · DUSK</div></div>
+  </div>
+  <div class="hero-meta">
+    <div><strong>10</strong>Years of Craft</div>
+    <div><strong>240+</strong>Brides in 2025</div>
+    <div><strong>14</strong>Days to Make</div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Bridal Gowns</span><span>Evening Dresses</span><span>Cocktail</span><span>Pre-Order Atelier</span><span>Made in Tainan</span><span>Ship Worldwide</span>
+    <span>Bridal Gowns</span><span>Evening Dresses</span><span>Cocktail</span><span>Pre-Order Atelier</span><span>Made in Tainan</span><span>Ship Worldwide</span>
+  </div>
+</div>
+
+<!-- COLLECTION -->
+<section class="section" id="collection">
+  <div class="section-header">
+    <div>
+      <div class="section-num">— 01 / Collection</div>
+      <h2 class="section-title">The <em>Atelier</em></h2>
+    </div>
+    <p class="section-desc">依風格、顏色、版型篩選。每一件都可預購，由版師為你量身。</p>
+  </div>
+
+  <div class="filters">
+    <span class="filter-label">Style</span>
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="korean">韓系極簡</button>
+    <button class="chip" data-filter="vintage">復古旗袍</button>
+    <button class="chip" data-filter="french">法式優雅</button>
+    <button class="chip" data-filter="modern">現代簡約</button>
+    <button class="chip" data-filter="lace">立體蕾絲</button>
+    <button class="chip" data-filter="ballgown">公主蓬裙</button>
+    <button class="chip" data-filter="slip">緞面細肩</button>
+  </div>
+
+  <div class="color-row">
+    <span class="filter-label">Color</span>
+    <div class="color-swatch active" style="background:#fefdfa" data-name="Ivory"></div>
+    <div class="color-swatch" style="background:#f5ebd9" data-name="Champagne"></div>
+    <div class="color-swatch" style="background:#e8d4b8" data-name="Nude"></div>
+    <div class="color-swatch" style="background:#d4a89c" data-name="Dusty Rose"></div>
+    <div class="color-swatch" style="background:#a89878" data-name="Mocha"></div>
+    <div class="color-swatch" style="background:#7a8a7a" data-name="Sage"></div>
+    <div class="color-swatch" style="background:#4a5568" data-name="Slate"></div>
+    <div class="color-swatch" style="background:#1a1612" data-name="Onyx"></div>
+    <div class="color-swatch" style="background:#8b2635" data-name="Crimson"></div>
+  </div>
+
+  <div class="dress-grid">
+    <a class="dress-card tall" href="#"><div class="img" style="background-image:linear-gradient(160deg,#f0e6d4 0%,#c4b094 100%)"><div class="dress-tag">New</div><div class="dress-color-dots"><span style="background:#fefdfa"></span><span style="background:#f5ebd9"></span></div></div><div class="dress-info"><div><div class="dress-name">Aurora</div><div class="dress-meta">AA-2601 · Korean Minimal</div></div><div class="dress-price">NT$ 28,800</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(180deg,#e8dcc8 0%,#a89478 100%)"><div class="dress-color-dots"><span style="background:#e8d4b8"></span></div></div><div class="dress-info"><div><div class="dress-name">Lin</div><div class="dress-meta">AA-2602 · Vintage Cheongsam</div></div><div class="dress-price">NT$ 22,400</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(140deg,#dcd0bd 0%,#988470 100%)"><div class="dress-tag">Bestseller</div><div class="dress-color-dots"><span style="background:#d4a89c"></span><span style="background:#a89878"></span></div></div><div class="dress-info"><div><div class="dress-name">Coco</div><div class="dress-meta">AA-2603 · Slip Satin</div></div><div class="dress-price">NT$ 14,800</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(170deg,#d4c4ac 0%,#7a6a52 100%)"><div class="dress-color-dots"><span style="background:#1a1612"></span></div></div><div class="dress-info"><div><div class="dress-name">Noir</div><div class="dress-meta">AA-2604 · Evening</div></div><div class="dress-price">NT$ 18,600</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(200deg,#ece0c8 0%,#b4a080 100%)"><div class="dress-color-dots"><span style="background:#fefdfa"></span><span style="background:#f5ebd9"></span><span style="background:#e8d4b8"></span></div></div><div class="dress-info"><div><div class="dress-name">Margot</div><div class="dress-meta">AA-2605 · French Lace</div></div><div class="dress-price">NT$ 36,000</div></div></a>
+    <a class="dress-card tall" href="#"><div class="img" style="background-image:linear-gradient(160deg,#e0d4bc 0%,#8a7458 100%)"><div class="dress-tag">Pre-Order</div><div class="dress-color-dots"><span style="background:#fefdfa"></span></div></div><div class="dress-info"><div><div class="dress-name">Vesper</div><div class="dress-meta">AA-2606 · Modern Ballgown</div></div><div class="dress-price">NT$ 42,000</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(180deg,#d4c4ac 0%,#a89074 100%)"><div class="dress-color-dots"><span style="background:#7a8a7a"></span></div></div><div class="dress-info"><div><div class="dress-name">Sage</div><div class="dress-meta">AA-2607 · Cocktail</div></div><div class="dress-price">NT$ 12,400</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(120deg,#e4d8c0 0%,#ac9878 100%)"><div class="dress-color-dots"><span style="background:#fefdfa"></span><span style="background:#e8d4b8"></span></div></div><div class="dress-info"><div><div class="dress-name">Iris</div><div class="dress-meta">AA-2608 · 3D Lace</div></div><div class="dress-price">NT$ 32,000</div></div></a>
+    <a class="dress-card" href="#"><div class="img" style="background-image:linear-gradient(140deg,#dcc8b0 0%,#8b6f47 100%)"><div class="dress-tag">New</div><div class="dress-color-dots"><span style="background:#8b2635"></span></div></div><div class="dress-info"><div><div class="dress-name">Rouge</div><div class="dress-meta">AA-2609 · Statement</div></div><div class="dress-price">NT$ 24,800</div></div></a>
+  </div>
+</section>
+
+<!-- TREND WALL -->
+<section class="section trend-section" id="trends">
+  <div class="section-header">
+    <div>
+      <div class="section-num">— 02 / Inspiration</div>
+      <h2 class="section-title">Trend <em>Wall</em></h2>
+    </div>
+    <p class="section-desc">由 Miss Lena 策展的婚紗風格 boards，每日從 Pinterest 自動更新。所有圖片皆連回原始來源。</p>
+  </div>
+
+  <div class="trend-tabs" id="trend-tabs">
+    <button class="trend-tab active" data-board="all">All</button>
+    <!-- 其他 tabs 由 JS 動態產生 -->
+  </div>
+
+  <div class="trend-grid" id="trend-grid">
+    <div class="trend-loading">Loading trends from Pinterest…</div>
+  </div>
+
+  <div class="trend-update" id="trend-update"></div>
+</section>
+
+<!-- PREORDER -->
+<section class="section" id="preorder">
+  <div class="section-header">
+    <div>
+      <div class="section-num">— 03 / Pre-Order</div>
+      <h2 class="section-title">Made-to-Order <em>Process</em></h2>
+    </div>
+    <p class="section-desc">從下訂到收到禮服，平均 30 天。所有步驟透明，可隨時透過 LINE 追蹤進度。</p>
+  </div>
+
+  <div class="preorder-section">
+    <div class="preorder-visual"><div class="preorder-img"></div></div>
+    <div>
+      <div class="timeline">
+        <div class="timeline-step done"><div class="days">DAY 0</div><h4>下訂與付訂金</h4><p>線上選款、填寫尺寸、支付 30% 訂金。我們會在 24 小時內以 LINE 與你確認細節。</p></div>
+        <div class="timeline-step done"><div class="days">DAY 3 — 7</div><h4>量身與打版</h4><p>可選擇寄送量身工具包至家中，或預約視訊量身。版師根據你的尺寸製作專屬紙樣。</p></div>
+        <div class="timeline-step"><div class="days">DAY 7 — 24</div><h4>裁剪與手工製作</h4><p>由台南工坊師傅手工縫製。製作中會分享 2 次進度照片，讓你安心。</p></div>
+        <div class="timeline-step"><div class="days">DAY 24 — 28</div><h4>品檢與最後修飾</h4><p>三道品檢、人工燙整、附上專屬禮服袋。尾款於出貨前結清。</p></div>
+        <div class="timeline-step"><div class="days">DAY 30</div><h4>送達你手中</h4><p>順豐／黑貓專人配送，附穿著與保養指南。收到後 7 天內可申請尺寸微調。</p></div>
+      </div>
+      <div class="preorder-form">
+        <h3>Reserve Your Fitting</h3>
+        <p class="sub">提交後我們會於 24 小時內以 LINE 聯繫</p>
+        <div class="form-row"><input class="form-input" placeholder="姓名 / Name"><input class="form-input" placeholder="LINE ID"></div>
+        <div class="form-row"><input class="form-input" placeholder="婚期 / Event Date" type="date"><select class="form-input"><option>禮服類型</option><option>白紗 Bridal</option><option>晚禮服 Evening</option><option>小禮服 Cocktail</option><option>旗袍 Cheongsam</option></select></div>
+        <textarea class="form-input" placeholder="想要的款式或編號（例如 AA-2601）／風格描述"></textarea>
+        <div class="deposit-box"><span>Deposit · 訂金</span><span>NT$ 3,000</span></div>
+        <button class="btn-primary" style="width:100%">送出預約 →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="section" id="story">
+  <div class="story-section">
+    <div class="story-text">
+      <div class="section-num">— 04 / Story</div>
+      <h2>Ten years,<br>one <em>quiet</em> obsession.</h2>
+      <p>2015 年，Miss Lena 在台南開設第一間婚紗工作室。十年來，我們陪伴超過兩千位新娘走過人生最重要的一天。</p>
+      <p>2026 年，我們關掉實體店面，把資源放到製作本身——更好的布料、更細緻的版型、更彈性的線上訂製流程。少了店租，多了你的選擇。</p>
+      <div class="story-stats">
+        <div class="story-stat"><strong>2015</strong><span>Founded</span></div>
+        <div class="story-stat"><strong>2,400+</strong><span>Brides</span></div>
+        <div class="story-stat"><strong>4.9</strong><span>Google Rating</span></div>
+      </div>
+    </div>
+    <div class="story-visual">
+      <div class="story-img"></div><div class="story-img"></div><div class="story-img"></div><div class="story-img"></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h3>Miss Lena</h3>
+      <p>Bridal & Evening Atelier · Made in Tainan, Taiwan. 從台南出發，把手作禮服送到世界各地的你。</p>
+    </div>
+    <div class="footer-col">
+      <h5>Shop</h5>
+      <ul><li><a href="#">Bridal Gowns</a></li><li><a href="#">Evening Dresses</a></li><li><a href="#">Cocktail</a></li><li><a href="#">Cheongsam</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h5>Atelier</h5>
+      <ul><li><a href="#">Pre-Order Process</a></li><li><a href="#">Size Guide</a></li><li><a href="#">Care Guide</a></li><li><a href="#">Shipping & Returns</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <ul><li><a href="#">LINE @misslena</a></li><li><a href="https://www.instagram.com/misslenacom_official/">@misslenacom_official</a></li><li><a href="#">+886 932-872-610</a></li><li><a href="#">hello@miss-lena.com</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Miss Lena Bridal Atelier · All Rights Reserved</span>
+    <span>Tainan, Taiwan</span>
+  </div>
+</footer>
+
+<!-- Mobile sticky CTA — 手機獨有，桌機隱藏 -->
+<div class="mobile-cta">
+  <a href="https://line.me/R/ti/p/@misslena" class="cta-line" target="_blank" rel="noopener">LINE 諮詢</a>
+  <a href="#preorder" class="cta-book">Book Fitting</a>
+</div>
+
+<script>
+// ===== Filter chips & swatches & tabs =====
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));
+  c.classList.add('active');
+}));
+document.querySelectorAll('.color-swatch').forEach(s=>s.addEventListener('click',()=>{
+  document.querySelectorAll('.color-swatch').forEach(x=>x.classList.remove('active'));
+  s.classList.add('active');
+}));
+
+// ===== TREND WALL — read trends.json =====
+async function loadTrends(){
+  try{
+    // 加 ?t=時間戳避免快取
+    const res = await fetch('data/trends.json?t=' + Date.now());
+    if(!res.ok) throw new Error('no data');
+    const data = await res.json();
+    renderTrends(data);
+  }catch(e){
+    console.warn('Trends loading failed, using placeholders.', e);
+    renderPlaceholder();
+  }
+}
+
+function renderTrends(data){
+  const grid = document.getElementById('trend-grid');
+  const tabs = document.getElementById('trend-tabs');
+  const updateEl = document.getElementById('trend-update');
+
+  if(!data || !data.boards || data.boards.length === 0){
+    renderPlaceholder();
+    return;
+  }
+
+  // 建立 tabs
+  tabs.innerHTML = '<button class="trend-tab active" data-board="all">All</button>';
+  data.boards.forEach(b=>{
+    const btn = document.createElement('button');
+    btn.className = 'trend-tab';
+    btn.dataset.board = b.id;
+    btn.textContent = b.name;
+    tabs.appendChild(btn);
+  });
+
+  // 收集所有 pin
+  let allPins = [];
+  data.boards.forEach(b => b.pins.forEach(p => allPins.push({...p, board_id: b.id, board_name: b.name})));
+
+  function draw(boardId){
+    const pins = boardId === 'all' ? allPins : allPins.filter(p => p.board_id === boardId);
+    grid.innerHTML = '';
+    if(pins.length === 0){
+      grid.innerHTML = '<div class="trend-loading">No pins in this board yet.</div>';
+      return;
+    }
+    pins.forEach(p => {
+      const a = document.createElement('a');
+      a.className = 'trend-item';
+      a.href = p.link || '#';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      // 顯示「Photo by 攝影師 / 來源」— Unsplash 強制要求，Pexels 是禮貌
+      const sourceName = (p.source === 'unsplash') ? 'Unsplash' : 'Pexels';
+      const credit = p.photographer
+        ? `${p.board_name} · Photo by ${p.photographer} on ${sourceName}`
+        : `${p.board_name} · ${sourceName}`;
+      a.innerHTML = `
+        <img src="${p.image}" alt="${p.title || ''}" loading="lazy">
+        <div class="trend-overlay">
+          <div class="trend-source">${credit}</div>
+          <div class="trend-caption">${p.title || 'Untitled'}</div>
+        </div>`;
+      grid.appendChild(a);
+    });
+  }
+
+  // tab 點擊
+  tabs.querySelectorAll('.trend-tab').forEach(t=>{
+    t.addEventListener('click', () => {
+      tabs.querySelectorAll('.trend-tab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active');
+      draw(t.dataset.board);
+    });
+  });
+
+  // 顯示更新時間
+  if(data.updated_at){
+    const d = new Date(data.updated_at);
+    updateEl.textContent = `Last updated: ${d.toLocaleDateString('zh-TW')} ${d.toLocaleTimeString('zh-TW',{hour:'2-digit',minute:'2-digit'})}`;
+  }
+
+  // 預設顯示 all
+  draw('all');
+}
+
+function renderPlaceholder(){
+  const grid = document.getElementById('trend-grid');
+  const html = [];
+  for(let i=1;i<=8;i++){
+    html.push(`
+      <div class="trend-item ph${i}">
+        <div class="trend-overlay">
+          <div class="trend-source">Placeholder</div>
+          <div class="trend-caption">Pinterest data not loaded yet</div>
+        </div>
+      </div>`);
+  }
+  grid.innerHTML = html.join('');
+  document.getElementById('trend-update').textContent = 'Showing placeholder · trends.json not found';
+}
+
+loadTrends();
+</script>
+
+</body>
+</html>
